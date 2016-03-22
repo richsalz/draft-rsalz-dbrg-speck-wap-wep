@@ -28,9 +28,23 @@ informative:
     target: http://www.tau.ac.il/~tromer/papers/acoustic-20131218.pdf
     title: "RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis"
     author:
-      name: Daniel Genkin, Adi shamir, Eran Tromer
+      -
+        name: Daniel Genkin
+        org: Technion and Tel Aviv University
+      -
+        name: Adi shamir
+        org: Weizmann Institute of Science
+      -
+        name: Eran Tromer
+        org: Tel Aviv University
     date: 2013-12-18
-
+  davis:
+    target: http://world.std.com/~dtd/sign_encrypt/sign_encrypt7.PDF
+    title: "Defective Sign & Encrypt in S/MIME, PKCS#7, MOSS, PEM, PGP, and XML."
+    date: 2001-06-25
+    author:
+    seriesinfo:
+      Usenix: Proc. Usenix Tech. Conf.
 
 --- abstract
 
@@ -101,8 +115,7 @@ think about RFI emissions from our phone.
 Cryptography is hard because the order of operations can matter.  It is
 not intuitively obvious to most developers, which should come first among
 signing, compression and encryption. This issues was first raised in Spring
-of 2001 ("Defective Sign & Encrpyt in S/MIME, PKCS#7, MOSS, PEM, and XML"
-by Don Davis) but was only addressed in TLS by {{RFC7366}} more than a
+of 2001 {{davis}} but was only addressed in TLS by {{RFC7366}} more than a
 dozen years later.
 
 Getting the cryptography right is important because the Internet, and
