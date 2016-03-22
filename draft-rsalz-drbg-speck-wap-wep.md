@@ -24,6 +24,12 @@ informative:
   RFC7258:
   RFC7366:
   RFC7696:
+  acoustic:
+    target: http://www.tau.ac.il/~tromer/papers/acoustic-20131218.pdf
+    title: "RSA Key Extraction via Low-Bandwidth Acoustic Cryptanalysis"
+    author:
+      name: Daniel Genkin, Adi shamir, Eran Tromer
+    date: 2013-12-18
 
 
 --- abstract
@@ -68,7 +74,7 @@ definition around what such a review would look like.
 # Why is Cryptography Hard?
 
 Cryptography is hard because it is not like traditional IETF protocol
-deployments.  In this classic situation, if one one party implements
+deployments.  In this classic situation, if one party implements
 a protocol incorrectly, it usually becomes obvious as interoperability
 suffers or completely fails.  But with cryptography, one party can have
 implementation defects, or known exploitable weaknesses, that expose the
@@ -78,7 +84,7 @@ not a panacea here, but using only widely-accepted cryptographic mechanisms
 will reduce the attack surface.
 
 Cryptography is hard because subtle design characteristics can have
-disastrous consequences.  For example, the US Digital Signatiure Algorithm
+disastrous consequences.  For example, the US Digital Signature Algorithm
 requires the random nonce to be protected and never re-used.  If those
 requirements are not met, the private key can be leaked.
 
@@ -86,6 +92,7 @@ Cryptography is hard because adversaries design new attacks and refine
 existing ones.  Attacks get better over time; they never get worse.
 For example, it is now de riguer to protect against CPU timing attacks,
 even when the device is only viewable over a network.  A recent paper
+{{acoustic}}
 (XXX reference) can identify a private key if your smartphone is just laid
 next to an innocuous charging device.  We understand power differential
 attacks, timing attacks, and perhaps cache line attacks; we now have to
@@ -108,7 +115,7 @@ on behalf of their nation-state.
 
 "Sunlight is said to be the best of disinfectants; electric light the most
 efficient policeman." -- Louis Brandeis, *Other People's Money and How Bankers
-Use it,* first published as a set of articles in _Harper's Weekly_.
+Use it,* first published as a set of articles in _Harper's Weekly_ in 1914.
 
 Cryptography that is developed in private, such as among an industry
 consortium is a bad idea.  Notable examples of this include:
@@ -116,6 +123,10 @@ consortium is a bad idea.  Notable examples of this include:
 * A5/1 and A5/2 for GSM-based mobile phones.
 
 * WEP and WPA for WiFi access.
+
+* SSLv2, while published, was developed by a private group at an Internet
+startup.  It had security flaws that had global effects decades later,
+see <https://drownattack.com/>.
 
 It is hard to get good public review of patented cryptography, unless there
 is a strongly compelling need.  For example, decades ago RSA was the only
@@ -128,7 +139,7 @@ include:
 * Algebraic Eraser, presented at IETF-xx (XXX reference), and since then
 has had a number of effective attacks.
 
-* XXX MORE NEEDED
+* XXX STILL MORE NEEDED
 
 # How to Do it Right
 
@@ -156,11 +167,15 @@ wide international participation and analysis by many noted exports.
 Papers presented in the various Crypto conferences (XXX need list) are
 good.  Same for various Usenix workshops.
 
-Proof by contest -- "Nobody's Claimed my $200 reward" -- are useless for a
-number of reasons.
+Proof by contest -- "Nobody's Claimed my $200 reward" -- are generally
+useless, for a number of reasons.
 They tend to be promoted by amateur cryptographers as a way to get
 attention, and if someone actually looks at them they are always cracked.
 Numerical analysis is a better approach, albeit much harder work.
+Contests designed to show the amount of "brute-force" work needed, such
+as the old RSA factoring challenges, can be useful.
+But they do not show, for example, if the cryptography under test is
+fundamentally flawed or not.
 
 # Acknowledgements
 
