@@ -1,24 +1,4 @@
-# No MTI Crypto without Public Review
-
-This is the working area for the Individual internet-draft, "No MTI Crypto without Public Review".
-
-* [Editor's copy](https://richsalz.github.io/draft-rsalz-dbrg-speck-wap-wep/)
-* [Individual Draft] (https://tools.ietf.org/html/draft-rsalz-drbg-speck-wap-wep)
-
-
-## Building the Draft
-
-Formatted text and HTML versions of the draft can be built using `make`.
-
-```sh
-$ make
-```
-
-This requires that you have the necessary software installed.  See [the
-instructions](https://github.com/martinthomson/i-d-template/blob/master/doc/SETUP.md).
-
-
-## Contributing
+# Contributing
 
 Before submitting feedback, please familiarize yourself with our current issues
 list and review the [working group
