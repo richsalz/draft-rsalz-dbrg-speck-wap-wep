@@ -53,7 +53,7 @@ and more IETF protocols are using, or looking at, cryptography to
 increase privacy on the Internet {{RFC7258}}.
 
 This document specifies a proposed best practice for any protocol (or data
-format) that uses cryptography. Namely, that such RFCs cannot specify an
+format) that uses cryptography; namely, that RFCs cannot specify an
 algorithm as mandatory-to-implement (MTI) unless that algorithm has had
 reasonable public review. This document also "sketches out" a rough
 definition around what such a review would look like.
@@ -69,7 +69,7 @@ document are to be interpreted as described in RFC 2119 {{RFC2119}}.
 The term "snake oil" is used as a pejorative for something
 which appears to do its job acceptably, but actually does not; see
 <https://en.wikipedia.org/wiki/Snake_oil_%28cryptography%29>.  It is a goal
-of the IETF that we never be mislead into being, or mistakenly taken as,
+of the IETF that we never be misled into being, or mistakenly taken as,
 snake oil salesman.
 
 # Introduction
