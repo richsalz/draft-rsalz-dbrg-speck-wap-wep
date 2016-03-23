@@ -23,6 +23,7 @@ normative:
 informative:
   RFC7258:
   RFC7366:
+  RFC7693:
   RFC7696:
   acoustic:
     target: http://www.tau.ac.il/~tromer/papers/acoustic-20131218.pdf
@@ -66,6 +67,10 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
 NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
 document are to be interpreted as described in RFC 2119 {{RFC2119}}.
 
+The term mandatory to implement (MTI) is used in this document
+to describe a cryptographic algorithm that is listed as a MUST
+in an RFC.
+
 The term "snake oil" is used as a pejorative for something
 which appears to do its job acceptably, but actually does not; see
 <https://en.wikipedia.org/wiki/Snake_oil_%28cryptography%29>.  It is a goal
@@ -83,7 +88,6 @@ format) that uses cryptography. Namely, that such RFCs cannot specify an
 algorithm as mandatory-to-implement (MTI) unless that algorithm has had
 reasonable public review. This document also "sketches out" a rough
 definition around what such a review would look like.
-
 
 # Why is Cryptography Hard?
 
@@ -153,6 +157,40 @@ include:
 has had a number of effective attacks.
 
 * XXX STILL MORE NEEDED
+
+# Why limit to MTI?
+
+There is an argument that any new RFC not classified as "historical"
+should not specify or recommend insufficiently-reviewed cryptography,
+whether it MTI or not.  This document limits itself to MTI for a couple
+of reasons.
+
+* Informational RFCs often document how to interoperate with other systems,
+and this is useful.  As examples of this, see the Internet-Drfats on
+scrypt and {{RFC7693}}.
+
+* Putting insufficiently-reviewed algorithms into an RFC can be one way to
+spur interest in getting more reviews.
+This MUST NOT be the primary motivation for inclusion, but it can be a
+useful side-effect, and might lead to future "promotion" to MTI.
+Note that waiting through draft and last-call state, then claiming "nobody
+broke it" MUST NOT be used as the rationale; this is using the IETF
+to host a "proof by contest."
+
+* Drawing a strict boundary just around MTI is a tractable problem.
+Drawing a similar boundary around all potential IETF uses of cryptography
+is bound to have mistakes and errors, any one of which can has the
+potential to make the IETF look bad, if not incompetent.
+
+* Requiring MTI to have public review also pressures everyone to conform
+and raise the bar. Imagine a hypothetical national security body that has a new
+cryptographic algorithm, Military Top-secret Encryption, or MITE.
+If MITE is not MTI, then that government might be hard-pressed to get it
+accepted into off-the-shell offerings.  If it is MTI without sufficient
+review, then they have good reason to keep flaws in existing cryptography
+private.  To avoid both situations, the that government should work to
+get MITE as an MTI, and would now have the burden to make sure it receives
+sufficient analysis.
 
 # How to Do it Right
 
