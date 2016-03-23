@@ -1,4 +1,5 @@
 .refcache
+lib
 *.html
 *.txt
 *.xml
