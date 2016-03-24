@@ -1,7 +1,2 @@
-.refcache
-lib/
-*.html
-*.txt
-*.xml
 lib
-draft-rsalz-drbg-speck-wap-wep.xml
+.refcache
