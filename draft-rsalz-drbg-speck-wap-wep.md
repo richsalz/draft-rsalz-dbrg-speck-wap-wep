@@ -53,7 +53,7 @@ Cryptography is becoming more important to the IETF and its protocols,
 and more IETF protocols are using, or looking at, cryptography to
 increase privacy on the Internet {{RFC7258}}.
 
-This document specifies a proposed best practice for any protocol (or data
+This document specifies a proposed best practice for any mechanism (or data
 format) that uses cryptography; namely, that RFCs cannot specify an
 algorithm as mandatory-to-implement (MTI) unless that algorithm has had
 reasonable public review. This document also "sketches out" a rough
