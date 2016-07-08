@@ -2,7 +2,7 @@
 title: "No MTI Crypto without Public Review"
 abbrev: crypto-pubreview
 docname: draft-rsalz-drbg-speck-wap-wep-latest
-date: 2016-03-21
+date: 2016-07-08
 category: bcp
 ipr: trust200902
 
