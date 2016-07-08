@@ -147,14 +147,22 @@ see <https://drownattack.com/>.
 
 It is hard to get good public review of patented cryptography, unless there
 is a strongly compelling need.  For example, decades ago RSA was the only
-practial public-key mechanism available. Part of the concern about patented
+practial public-key mechanism available and it was therefore studied pretty
+extensively.
+
+Part of the concern about patented
 cryptography is that the patent-holder has every incentive to provide that
 their system is good, while the rest of the world generally has little
 interest in proving that their commercial venture is bad.  Examples of this
 include:
 
-* Algebraic Eraser, presented at IETF-xx (XXX reference), and since then
-has had a number of effective attacks.
+* Algebraic Eraser, prior to its presentation at IETF-xx, received little
+public interest.
+
+* There is not a great deal of study about NTRU.
+
+Both of these items are "lattice cryptography" and that might also be a
+reason for lack of review; the field might not have much interest yet.
 
 * XXX STILL MORE NEEDED
 
@@ -204,11 +212,21 @@ weak crypto, and when to use the "latest and greatest," and while not much
 software, and essentially no end-users, are capable of making that choice,
 it seems sadly the best we can do.
 
+NIST is an important reference for crypto algorithms. Yes, they have made
+mistakes (DUAL_EC_DRBG), but so has the IETF (opaque-prf) in the same
+area.  But they have run respected international contests and their output
+receives heavy scrutiny.
+
 The second consideration is to avoid temptation and premature optimization.
 Do not adopt an algorithm just because it seems "small and fast" or comes
 from "someone I respect."
 
-What constitutes sufficient public review?  It is hard to say.  An open
+## Public Review
+
+What constitutes sufficient public review?  It is hard to say.  This
+section attempts to provide some guidelines.
+
+An open
 competition, such as those that led to AES (XXX ref) and SHA-3 (XXX ref)
 seem to be good, even when they come from sources that are under widespread
 suspicion, like the US Government. These efforts, like the Password Hashing
@@ -227,6 +245,10 @@ Contests designed to show the amount of "brute-force" work needed, such
 as the old RSA factoring challenges, can be useful.
 But they do not show, for example, if the cryptography under test is
 fundamentally flawed or not.
+
+Public review is also a natural fit for the IETF, which takes "rough
+consensus and running code" as an axiom. Theory reduced to practice is
+much easier, and much less of a limited academic exercise, to review.
 
 # Acknowledgements
 
